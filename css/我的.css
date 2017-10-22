@@ -1,0 +1,11 @@
+@media(min-width: 642px){.content{font-size:30px;}}
+@media(max-width: 641px){.content{font-size:24px;}}
+@media(max-width: 481px){.content{font-size:18px;}}
+@media screen and (max-width: 321px){.content{font-size:12px;}}
+.content a{display:block;width: 100%;border: 1px solid #dddddd;background: #fff;border-bottom: none;}
+.left{line-height: 2.5em;}
+.my_name{margin: 0.5em 0;height:4em;}
+
+.left img,.my_name_left{height: 1em;float:right;margin-right: 1em;margin-top: 0.75em;}
+.my_name .my_name_left{margin-top:1.5em;}
+.left span{margin-left: 1em;display: inline-block;}

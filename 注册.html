@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/忘记密码.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="title">
+        <div class="container">
+            <div class="row">
+                <a href="index.html" class="my_next col-xs-2 text-center"><img src="img/left.png" alt=""/></a>
+                <span class="wang_title col-xs-4 col-xs-offset-2 text-center">注册</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="wang_text col-xs-12">
+                <input type="text" class="col-xs-12 hairlines" value="请输入手机号" onfocus="javascript:if(this.value=='请输入手机号')this.value='';"onblur="javascript:if(this.value=='')this.value='请输入手机号';">
+                <input type="text" class="col-xs-12 hairlines" value="请输入密码" onfocus="javascript:if(this.value=='请输入密码')this.value='';"onblur="javascript:if(this.value=='')this.value='请输入密码';">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <form class="wang_text_a" style="position: relative;border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;">
+                <input type="text" class="col-xs-12  hairlines" value="请输入验证码" onfocus="javascript:if(this.value=='请输入验证码')this.value='';"onblur="javascript:if(this.value=='')this.value='请输入验证码';">
+                <input type="button" value="获取验证码" class="wang_get" style="position: absolute;"/>
+            </form>
+        </div>
+    </div>
+    <input type="button" value="注册" class="col-xs-offset-2 col-xs-8 wang_btn"/>
+</div>
+</body>
+</html>

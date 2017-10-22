@@ -1,0 +1,7 @@
+@media(min-width: 642px){.rest{font-size:30px;}.money{font-size:100px;}}
+@media(max-width: 641px){.rest{font-size:24px;}.money{font-size:90px;}}
+@media(max-width: 481px){.rest{font-size:18px;}.money{font-size:75px;}}
+@media screen and (max-width: 321px){.rest{font-size:12px;}.money{font-size:57px;}}
+.rest,.money{color: #fff;}
+.rest{position: absolute;top:3.5em;left: 1em;}
+.money{margin-left: 0.2em;padding-top: 0.9em;}

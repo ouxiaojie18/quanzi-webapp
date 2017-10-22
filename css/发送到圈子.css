@@ -1,0 +1,7 @@
+@media(min-width: 642px){.content,.area{font-size:30px;}}
+@media(max-width: 641px){.content,.area{font-size:24px;}}
+@media(max-width: 481px){.content,.area{font-size:18px;}}
+@media screen and (max-width: 321px){.content,.area{font-size:12px;}}
+.content{width: 100%;border: 1px #ddd solid;background: #fff;border-bottom: 1px solid #ddd;margin-bottom: 1em;}
+textarea{border: none;resize: none;padding:1em;height: 8em;}
+.area{background: #fff;}

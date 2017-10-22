@@ -1,0 +1,9 @@
+@media(min-width: 642px){.my_next,.my_add{font-size:36px;}.info_title{font-size:28px;}.info_tip{font-size:22px;}}
+@media(max-width: 641px){.my_next,.my_add{font-size:29px;}.info_title{font-size:22px;}.info_tip{font-size:17px;}}
+@media(max-width: 481px){.my_next,.my_add{font-size:21px;}.info_title{font-size:16px;}.info_tip{font-size:13px;}}
+@media screen and (max-width: 321px){.my_next,.my_add{font-size:15px;}.info_title{font-size: 14px;}.info_tip{font-size:9px;}.txt{-webkit-transform:scale(0.9);}}
+.my_add img{width:1em;height: 1em;margin-top:0.8em;}
+.my_next img{width:0.7em;height: 1em;margin-top:0.8em;}
+.message{border: 1px solid #dddddd;background: #fff;padding: 0.5em 0 0.5em 0.5em;width: 96%;
+    margin-left: 2%;margin-top: 1em;box-shadow: 5px 5px 10px #e0e0e0;}
+.txt{padding-right:0;padding-left: 0.5em;}

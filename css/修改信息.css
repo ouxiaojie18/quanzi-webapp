@@ -1,0 +1,7 @@
+@media(min-width: 642px){.content{font-size:30px;}}
+@media(max-width: 641px){.content{font-size:24px;}}
+@media(max-width: 481px){.content{font-size:18px;}}
+@media screen and (max-width: 321px){.content{font-size:12px;}}
+.content img{width:2em;margin-left: 0.5em;margin-right: 1em;}
+.content div{background: #fff;margin-bottom: 1px;height:3em;line-height:3em;}
+.content a{color: #ff726b;text-align: center;display:block;}

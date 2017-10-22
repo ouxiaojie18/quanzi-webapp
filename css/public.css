@@ -1,0 +1,36 @@
+body,h1,h2,h3,h4,p,span,ul,li,input,a{ margin:0; padding:0;}
+body{ width:100%;font-family:"Î¢ÈíÑÅºÚ",Arial, Helvetica, sans-serif;background: #eeeeee;color: #333333;}
+ul,li{list-style:none;}
+img{border:0;}
+a:hover{text-decoration:none;}
+a{color: #000;}
+input,select,option,textarea{outline: none;}
+
+/*public*/
+@media(min-width: 642px){.my_next,.my_add,.wang_title{font-size:36px;}.foot{font-size:19px;}}
+@media(max-width: 641px){.my_next,.my_add,.wang_title{font-size:29px;}.foot{font-size:16px;}}
+@media(max-width: 481px){.my_next,.my_add,.wang_title{font-size:21px;}.foot{font-size:12px;}}
+@media screen and (max-width: 321px){.my_next,.my_add,.wang_title{font-size:15px;}.foot p{font-size: 12px;-webkit-transform: scale(0.6);
+                                                                                      transform: scale(0.6);}}
+@media screen and (-webkit-device-pixel-ratio: 2){
+    .hairlines{border:0;}
+    .hairlines {
+        background-position: left top;
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.3, #ddd), color-stop(0.3, #ddd));
+    }
+    .hairlines{
+        background-repeat: repeat-x;
+        -webkit-background-size: 100% 0.1px;
+    }
+}
+.my_add img{width:1em;height: 1em;margin-top:0.8em;}
+.my_next img{width:0.7em;height: 1em;margin-top:0.8em;}
+.wrap{position:absolute;left:0;right:0;top:0;bottom:0;}
+.title{background: url(../img/bk.png)no-repeat;position: relative;background-size:100% 100%;}
+.wang_title{color: #fff;height: 2.7em;padding-top: 0.7em;font-weight: bold;}
+.wang_next{position: absolute;margin:0.8em 0 0 1.5em;width:0.7em;height: 1em;}
+.foot{background: #fff;width: 100%;}
+.foot img{width:2em;height:2em;margin: 0.5em 0 0.2em 0;}
+.foot p{margin-bottom: 0.2em;color: #666666;}
+
+/*public*/

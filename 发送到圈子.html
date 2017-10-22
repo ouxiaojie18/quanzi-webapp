@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>发送到圈子</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/JavaScript" src="http://cdn.bootcss.com/hammer.js/2.0.8/hammer.min.js"></script>
+    <script language="javascript" src="http://img.jb51.net/jslib/jquery/jquery-1.3.2.min.js"></script>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/聚会.css">
+    <link rel="stylesheet" href="css/发送到圈子.css">
+    <link rel="stylesheet" href="css/我的.css">
+    <style>
+        .preview{
+            display: block;
+        }
+        #doc{position: absolute;left: 0;top: 0;opacity: 0;filter: alpha(opacity=0);z-index: 1;}
+        #addPic{display:inline-block;position: absolute;left: 0;top: 0;z-index:0;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="title" style="position: relative;">
+        <div class="container">
+            <div class="row">
+                <a href="圈子.html" class="my_next col-xs-2 text-center"><img src="img/left.png" alt=""/></a>
+                <span class="wang_title col-xs-4 col-xs-offset-2 text-center">发圈子</span>
+                <a href="圈子.html" class="my_word col-xs-4 text-right">发送&nbsp;&nbsp;</a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                    <textarea class="col-xs-12 text-left aa" Placeholder="分享此刻的心情..."></textarea>
+                <!-- -->
+                <div style="position:relative;margin-top:8em;margin-left:1em;background:#fff;">
+                    <div id="localImag" style="position: relative;" ></div>
+                    <div>
+                        <input type="file"  name="file" accept="image/gif,image/jpeg,/image/png" multiple="multiple"  id="doc" >
+                        <img src="img/添加图片.png" id="addPic" alt=""/>
+                    </div>
+                </div>
+
+                <!-- -->
+            </div>
+        </div>
+    </div>
+    <!--<div class="area">-->
+        <!--<a  href="" class="left">-->
+            <!--<img src="img/位置.png" style="float: left;margin-left: 1em;" alt=""/>-->
+            <!--<span style="margin-left: -0.2em;">选择位置</span>-->
+            <!--<img class="left" src="img/左.jpg" alt=""/>-->
+        <!--</a>-->
+    <!--</div>-->
+</div>
+<script type="text/javascript">
+    //下面用于图片上传预览功能
+    var docObj=document.getElementById("doc");
+    var addPic=document.getElementById("addPic");
+    var stopLeft=0;
+    var stopTop=0;
+    docObj.onchange=function(){
+
+        setImagePreview();
+    };
+    var ScreenWidth=screen.width;
+    docObj.style.width =ScreenWidth*0.3+'px';
+    docObj.style.height =ScreenWidth*0.3+'px';
+    addPic.style.width =ScreenWidth*0.3+'px';
+
+    function setImagePreview() {
+        var addLeft=docObj.offsetLeft;
+        var addTop=docObj.offsetTop+document.body.scrollTop;
+        var localImagId = document.getElementById("localImag");
+        for(var j=0;j<docObj.files.length;j++){
+            localImagId.innerHTML+='<img class="preview" style="position: absolute;"  src="">'
+        }
+        var imgObjPreview=document.getElementsByClassName("preview");
+
+        if(docObj.files &&docObj.files[0])
+        {
+            for(var i=0;i<docObj.files.length;i++){
+                //火狐下，直接设img属性
+                imgObjPreview[i].style.position = 'absolute';
+                imgObjPreview[i].style.display = 'block';
+                imgObjPreview[i].style.width =ScreenWidth*0.3+'px';
+                imgObjPreview[i].style.height =ScreenWidth*0.3+'px';
+                stopLeft = (i+1)*(ScreenWidth*0.33)+addLeft;
+
+                imgObjPreview[i].style.left =(i%3)*(ScreenWidth*0.33)+addLeft+'px';
+                imgObjPreview[i].style.top=(Math.floor(i/3))*(ScreenWidth*0.33)+addTop+'px';
+
+//imgObjPreview.src = docObj.files[0].getAsDataURL();
+
+//火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+                imgObjPreview[i].src = window.URL.createObjectURL(docObj.files[i]);
+                console.log( docObj.files[i]);
+            }
+            addLeft=(docObj.files.length%3)*(ScreenWidth*0.33)+'px';
+            addTop=(Math.floor(docObj.files.length/3))*(ScreenWidth*0.33)+addTop+'px';
+            docObj.style.left =addLeft;
+            docObj.style.top =addTop;
+            addPic.style.top =addTop;
+            addPic.style.left =addLeft;
+        }
+        else
+        {
+//IE9下，使用滤镜
+            docObj.select();
+            var imgSrc = document.selection.createRange().text;
+
+//必须设置初始大小
+            localImagId.style.width = "150px";
+            localImagId.style.height = "180px";
+//图片异常的捕捉，防止用户修改后缀来伪造图片
+            try{
+                localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+            }
+            catch(e)
+            {
+                alert("您上传的图片格式不正确，请重新选择!");
+                return false;
+            }
+            imgObjPreview.style.display = 'none';
+            document.selection.empty();
+        }
+        return true;
+    }
+</script>
+</body>
+</html>

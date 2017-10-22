@@ -1,0 +1,4 @@
+@media(min-width: 642px){.area_name{font-size:36px;}}
+@media(max-width: 641px){.area_name{font-size:29px;}}
+@media(max-width: 481px){.area_name{font-size:21px;}}
+@media screen and (max-width: 321px){.area_name{font-size:15px;}}

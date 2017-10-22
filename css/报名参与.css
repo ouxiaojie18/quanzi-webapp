@@ -1,0 +1,13 @@
+@media(min-width: 642px){.bao_title,.bao_btn,.bao_next{font-size:36px;}
+    .bao_text,.bao_text_a{font-size:30px;}}
+@media(max-width: 641px){.bao_title,.bao_btn,.bao_next{font-size:29px;}
+    .bao_text,.bao_text_a{font-size:24px;}}
+@media(max-width: 481px){.bao_title,.bao_btn,.bao_next{font-size:21px;}
+    .bao_text,.bao_text_a{font-size:18px;}}
+@media screen and (max-width: 321px){.bao_title,.bao_btn,.bao_next{font-size:15px;}
+    .bao_text,.bao_text_a{font-size:12px;}}
+.bao_text{padding: 0;color: #999999;height: 2.5em;background: #fff;border-top: 1px solid #dddddd;}
+.bao_text input{border: none;height: 2.4em;color: #999999;padding: 0;}
+.bao_text span{line-height: 2.5em;color: #000;padding:0;margin-left: 1em;}
+.bao_btn{background: #ff726b;border-radius: 40px;height: 2em;color: #fff;border: none;margin-top: 4em;}
+

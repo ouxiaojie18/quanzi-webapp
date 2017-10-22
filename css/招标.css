@@ -1,0 +1,8 @@
+@media(min-width: 642px){.content{font-size:30px;}.wang_btn{font-size:36px;}}
+@media(max-width: 641px){.content{font-size:24px;}.wang_btn{font-size:29px;}}
+@media(max-width: 481px){.content{font-size:18px;}.wang_btn{font-size:21px;}}
+@media screen and (max-width: 321px){.content{font-size:12px;}.wang_btn{font-size:15px;}}
+.content{width: 100%;line-height: 2em;}
+.content p,.content span{margin-left: 1em;}
+.content input{width: 60%;border: 1px solid #dddddd;border-radius: 10px;height: 7em;margin-top: 1.5em;}
+.wang_btn{background: #ff726b;border-radius: 40px;height: 2em;color: #fff;border: none;margin-top: 4em;}

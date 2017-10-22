@@ -1,0 +1,38 @@
+@media(min-width: 642px){.list h2,.qq_name{font-size:30px;}.qq_name{margin:-2.8em 0 0 -13.5em;}.qq_signal{font-size: 25px;}
+    .qq_signal{margin-left: -22.8em;}.list ul li{height:4.5em;}.lis div,.lis img{width:4em;height: 4em;}
+    .container .row .swiper-container{margin-top:8em;}.title{font-size:36px;}}
+@media(max-width: 641px){.list h2,.qq_name,.qq_signal{font-size:24px;}.qq_name{margin:-3em 0 0 -13.5em;}.qq_signal{font-size:19px;}
+    .qq_signal{margin-left: -14.8em;}.list ul li{height:4em;}.lis div,.lis img{width: 3.5em;height: 3.5em;}
+    .container .row .swiper-container{margin-top:4.2em;}.title{font-size:29px;}}
+@media(max-width: 481px){.list h2,.qq_name,.qq_signal{font-size:18px;}.qq_name{margin-top:-3em;margin-left: -45%;}.qq_signal{font-size: 14px;}
+    .qq_signal{margin-left: -42%;}.list ul li{height:3em;}.lis div,.lis img{width: 2.5em;height: 2.5em;}
+    .container .row .swiper-container{margin-top:4.2em;}.title{font-size:21px;}}
+@media screen and (max-width: 321px){.list h2,.qq_name,.qq_signal{font-size:12px;}.qq_name{margin:-3.5em 0 0 -13em;}
+    .qq_signal{margin-left: -11.3em;}.list ul li{height: 2.5em;}.lis div,.lis img{width: 2em;height: 2em;}
+    .container .row .swiper-container{margin-top: 2.5em;}.title{font-size:15px;}.qq_signal{font-size: 12px;-webkit-transform: scale(0.95);transform: scale(0.95);}}
+ul , h2 { padding:0; margin:0; }
+li { list-style:none; }
+.list { width:100%; margin:0 auto; }
+.list .lis{position: relative;}
+.list .group{border-bottom:15px solid #eee;}
+.list h2 { text-align:left;padding-left:2em;border-bottom:1px solid #dddddd;height:3em; line-height:3em; background:url(../img/ico1.gif) no-repeat 10px center; color:#000;}
+.list .active { background:url(../img/ico2.gif) no-repeat 10px center; color:#000; }
+.list ul {display:none;}
+.list ul li { padding-top:0.25em;border-bottom:1px solid #dddddd;}
+.list img{position: absolute;border-radius: 50%;overflow: hidden;left:1em;}
+.qq_signal{margin-top: 0;}
+
+
+.swiper-container {
+    width: 100%;
+    margin: 0 auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+.container,.row,{padding:0;}
+.title #active{background:#fff;color: #ff726b;}
+.fri_btn_a{padding:0;border:1px solid #fff;background: #ff8564;border-radius:6px 0 0 6px;color:#fff;}
+.fri_btn_b{padding:0;border-radius:0 6px 6px 0;border:1px solid #fff;background: #ff8564;color:#fff;}

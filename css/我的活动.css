@@ -1,0 +1,6 @@
+@media(min-width: 642px){.content input{font-size:24px;}}
+@media(max-width: 641px){.content input{font-size:19px;}}
+@media(max-width: 481px){.content input{font-size:14px;}}
+@media screen and (max-width: 321px){.content input{font-size: 12px;}}
+.content input{border: none;background: #fff;border-bottom:1px solid #dddddd;height:2.2em;width:100%;color: #333333;}
+.content .my_btn{border-top:1px solid #dddddd;margin-top: 1em;}

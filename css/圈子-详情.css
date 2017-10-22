@@ -1,0 +1,12 @@
+@media(min-width: 642px){.main_title{font-size:30px;}.main_date{font-size: 22px;}.date{left: 6.2em;top:2.7em;}
+    .command{margin-left: 5.9em;}.main-tip{left:4.5em;}}
+@media(max-width: 641px){.main_title{font-size:22px;}.main_date{font-size: 17px;}.date{left: 6.2em;top:2.7em;}
+    .command{margin-left: 5.9em;}.main-tip{left:5em;}}
+@media(max-width: 481px){.main_title{font-size:15px;}.main_date{font-size: 13px;}.date{left: 6.2em;top:2.7em;}
+    .command{margin-left: 5.9em;}.main-tip{left:5em;}}
+@media screen and (max-width: 321px){.main_title{font-size:12px;}
+    .main_date{font-size: 12px;-webkit-transform: scale(0.9);transform: scale(0.9);}
+    .date{left: 4.5em;top:2.2em;}.command{margin-left: 3.7em;}.main-tip{left:5em;}}
+.message,.main{position: relative;background: #fff;}
+.main-tip{position:absolute;top:0.8em;}
+.date{position: absolute;color: #999;}

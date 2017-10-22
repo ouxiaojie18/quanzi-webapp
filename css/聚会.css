@@ -1,0 +1,36 @@
+@media(min-width: 642px){.my_word{font-size:30px;margin-top:1.2em;}.menu p,.list_h,.list_text{font-size: 22px;}.menu li{width: 19.5%;}
+    .info_title{font-size:28px;}.info_tip{font-size:22px;}.message div{padding-left: 10px;}}
+@media(max-width: 641px){.my_word{font-size:24px;margin-top:1.2em;}.menu p,.list_h,.list_text{font-size: 17px;}.menu li{width: 19%;}
+    .info_title{font-size:22px;}.info_tip{font-size:17px;}.message div{padding-left: 10px;}}
+@media(max-width: 481px){.my_word{font-size:16px;margin-top:1.2em;}.menu p,.list_h,.list_text{font-size: 12px;}.menu li{width: 19%;}
+    .info_title{font-size:16px;}.info_tip{font-size:13px;}.message div{padding-left: 10px;}}
+@media screen and (max-width: 321px){.my_word{font-size:12px;margin-top:1.2em;}.menu p,.list_head span,.list_text li{font-size: 12px;-webkit-transform: scale(0.84);transform: scale(0.84);}
+    .menu li{width: 18.5%;}.info_title{font-size: 14px;}.info_tip{font-size:9px;}.txt{-webkit-transform:scale(0.9);}.message div{padding:0;}}
+/*body{overflow:auto;}*/
+.my_word:hover{color: #fff;}
+.my_word{color: #fff;}
+.my_add img{width:1em;height: 1em;margin-top:0.8em;}
+.carousel-indicators {text-align: right;margin-left: -15%;}
+.carousel-indicators li{width: 7px;height: 7px;background: #9ca09d;border: 1px solid #9ca09d;border-radius: 7px;}
+.carousel-indicators .active {width: 9px;height:9px;margin: 0;background-color: #686967;}
+
+.menu{width: 94%;margin: 0 auto;}
+.menu li{display: inline-block;margin-top: 0.7em;}
+.menu img{width: 38%;margin: 0 auto;display:block;}
+.menu p{text-align: center;margin-top: 0.3em;color: #000}
+
+.list_h{line-height: 3em;}
+.list ul li{list-style:none;float: left;background: #fff;}
+.list ul .list_head{height: 2em;line-height: 2em;padding-bottom: 1em;}
+.list ul li.list-box{position:relative;}
+.list ul li.list-box ul{display:none;text-align:center;background:#fff;position: absolute;float: left;}
+.list ul li.list-box ul li{padding:5px 0;border-bottom:1px dotted #ddd;background: #fff;}
+.list_h{color: #000;display: inline-block;}
+.list_head img{width: 0.7em;background-size: 100%;}
+.list_text li{margin-bottom: 0.5em;}
+
+.message{border: 1px solid #dddddd;background: #fff;padding: 0.5em 0 0.5em 0.5em;width: 96%;
+    margin-left: 2%;margin-top: 1em;box-shadow: 5px 5px 10px #e0e0e0;}
+.txt{padding-right:0;padding-left: 0.5em;}
+body .news{background: #fff;}
+.info_tip{margin: 0.2em 0 0.3em 0;}

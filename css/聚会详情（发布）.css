@@ -1,0 +1,11 @@
+@media(min-width: 642px){.message p{font-size:24px;margin-left:1em;height: 1.8em;line-height: 1.8em;}
+    .message_last{margin-bottom: 9em;}.wang_btn{font-size:36px;}}
+@media(max-width: 641px){.message p{font-size:19px;margin-left:1em;height: 1.8em;line-height: 1.8em;}
+    .message_last{margin-bottom: 9em;}.wang_btn{font-size:29px;}}
+@media(max-width: 481px){.message p{font-size:14px;margin-left:1em;height: 1.8em;line-height: 1.8em;}
+    .message_last{margin-bottom: 9em;}.wang_btn{font-size:21px;}}
+@media screen and (max-width: 321px){.message p{font-size: 12px;margin-left:-1em;-webkit-transform: scale(0.84);transform: scale(0.84);
+    height: 1.5em;line-height: 1.5em;}.message_last{margin-bottom:6em;}.wang_btn{font-size:15px;}}
+.message{border: 1px solid #dddddd;background: #fff;width: 96%;
+    margin-left: 2%;margin-top: 1em;box-shadow: 5px 5px 10px #e0e0e0;}
+.wang_btn{background: #ff726b;border-radius: 40px;height: 2em;color: #fff;border: none;margin-top: 3em;}

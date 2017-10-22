@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html style="overflow-x: hidden;">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>创建聚会</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/创建聚会.css">
+    <link rel="stylesheet" href="css/忘记密码.css">
+    <script src="js/创建聚会.js" type="text/javascript"></script>
+
+    <script src="js/jquery.1.7.2.min.js"></script>
+    <script src="js/mobiscroll_002.js" type="text/javascript"></script>
+    <script src="js/mobiscroll_004.js" type="text/javascript"></script>
+    <link href="css/mobiscroll_002.css" rel="stylesheet" type="text/css">
+    <link href="css/mobiscroll.css" rel="stylesheet" type="text/css">
+    <script src="js/mobiscroll.js" type="text/javascript"></script>
+    <script src="js/mobiscroll_003.js" type="text/javascript"></script>
+    <script src="js/mobiscroll_005.js" type="text/javascript"></script>
+    <link href="css/mobiscroll_003.css" rel="stylesheet" type="text/css">
+
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/github-light.css" media="screen">
+
+</head>
+<body>
+<div class="wrap">
+    <div class="title">
+        <div class="container">
+            <div class="row">
+                <a href="我的聚会.html" class="my_next col-xs-2 text-center"><img src="img/left.png" alt=""/></a>
+                <span class="wang_title col-xs-4 col-xs-offset-2 text-center">创建聚会</span>
+            </div>
+        </div>
+    </div>
+    <div class="container content">
+        <div class="row">
+            <div class="creat creat_name col-xs-12">
+                <span class="col-xs-4" style="">聚会名称</span>
+                <input class="col-xs-7 text-left" Placeholder="请输入" type="text" style="border: none;padding: 0;"/>
+            </div>
+            <div class="left creat col-xs-12" style="margin-bottom: 1px;">
+                <span class="col-xs-4">聚会主题</span>
+                <span class="col-xs-7 text-right" id="picker1">请选择</span>
+                <img src="img/左.jpg" alt=""/>
+            </div>
+            <div class="left creat col-xs-12 creat_type">
+                <span class="col-xs-4">聚会类别</span>
+                <span class="col-xs-7 text-right" id="picker2">请选择</span>
+                <img src="img/左.jpg" alt=""/>
+            </div>
+            <div class="left creat col-xs-12 demos"  style="margin-bottom: 1px;">
+                <span class="col-xs-4" >聚会时间</span>
+                <input value="请选择" class="col-xs-7" style="text-align: right;margin-top: 0;padding-top: 0;border: none;" readonly="readonly" name="appDate" id="appDateTime" type="text">
+                <img src="img/左.jpg" alt=""/>
+            </div>
+            <div class="creat col-xs-12"  style="margin-bottom: 1px;">
+                <span class="col-xs-4" style="">聚会人数</span>
+                <span class="col-xs-8">
+                    <input type="text" class="col-xs-3 num text-center" style="padding:2px;"/>
+                    <span class="col-xs-3">----</span>
+                    <input type="text" class="col-xs-3 num text-center" style="padding:2px;"/>&nbsp&nbsp&nbsp人
+                </span>
+
+            </div>
+            <div class="creat col-xs-12"  style="margin-bottom: 1px;">
+                <span class="col-xs-4" style="">人均消费</span>
+                <input class="col-xs-7 text-left" type="text" Placeholder="请输入"  style="border: none;padding: 0;"/>
+            </div>
+            <div class="creat col-xs-12 left"  style="margin-bottom: 1px;">
+                <span class="col-xs-4" style="">活动配图</span>
+                <div id="localImag" style="position: relative;" ></div>
+                <div >
+                    <input type="file"  name="file" accept="image/gif,image/jpeg,/image/png" multiple="multiple"  id="doc" >
+                    <img src="img/相机.jpg" id="addPic" alt=""/>
+                </div>
+            </div>
+            <div class="creat col-xs-12 creat_type">
+                <span class="col-xs-4" style="">聚会介绍</span>
+                <textarea class="col-xs-7 text-left" Placeholder="请输入" style="border: none;resize: none;padding: 0;height: 6em;"></textarea>
+            </div>
+            <a href="map7.html" class="left creat col-xs-12" style="height:3em;overflow:hidden;color:#606c71;">
+                <span class="col-xs-4" style="">聚会区域</span>
+                <span class="col-xs-7 text-right area_news" style="margin-bottom:1em;height:1.3em;overflow:hidden;"></span>
+                <img src="img/左.jpg" alt=""  style="margin-bottom:1em;line-height:3em;"/>
+            </a>
+            <div class="creat col-xs-12" style="">
+                <span class=" col-xs-6">
+                    <input type="button" style="float: right;margin-right: 1em;" value="场地招标" class="creat_area col-xs-7" onclick="window.location.href='招标.html'"/>
+                </span>
+                <span class=" col-xs-6"  style="float: right">
+                    <input type="button" value="场地选择" style="margin-left: 1em;" class="creat_area col-xs-7" onclick="window.location.href='商家推荐.html'"/>
+                </span>
+            </div>
+            <input type="button" value="发起聚会" class="col-xs-offset-2 col-xs-8 wang_btn" style="margin-top: 2em;"/>
+        </div>
+    </div>
+
+</div>
+<script src="js/picker.min.js"></script>
+<script>
+    var data1 = [
+        {
+            text: '游戏',
+            value: 1
+        }, {
+            text: '骑行',
+            value: 2
+        },
+        {
+            text: '登山',
+            value: 3
+        },
+        {
+            text: '聚餐',
+            value: 4
+        },
+        {
+            text: '秋游',
+            value: 5
+        }
+    ];
+
+    var picker1El = document.getElementById('picker1');
+
+
+    var picker1 = new Picker({
+        data: [data1]
+    });
+
+    picker1.on('picker.select', function (selectedVal, selectedIndex) {
+        picker1El.innerText = data1[selectedIndex[0]].text;
+    });
+
+    picker1.on('picker.change', function (index, selectedIndex) {
+        console.log(index);
+    });
+
+    picker1.on('picker.valuechange', function (selectedVal, selectedIndex) {
+        console.log(selectedVal);
+    });
+
+
+
+    picker1El.addEventListener('click', function () {
+        picker1.show();
+    });
+
+
+
+    var data2 = [
+        {
+            text: '游戏',
+            value: 1
+        }, {
+            text: '骑行',
+            value: 2
+        },
+        {
+            text: '登山',
+            value: 3
+        },
+        {
+            text: '聚餐',
+            value: 4
+        },
+        {
+            text: '秋游',
+            value: 5
+        }
+    ];
+
+    var picker1E2 = document.getElementById('picker2');
+
+
+    var picker2 = new Picker({
+        data: [data2]
+    });
+
+    picker2.on('picker.select', function (selectedVal, selectedIndex) {
+        picker1E2.innerText = data1[selectedIndex[0]].text;
+    });
+
+    picker2.on('picker.change', function (index, selectedIndex) {
+        console.log(index);
+    });
+
+    picker2.on('picker.valuechange', function (selectedVal, selectedIndex) {
+        console.log(selectedVal);
+    });
+
+
+
+    picker1E2.addEventListener('click', function () {
+        picker2.show();
+    });
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        var currYear = (new Date()).getFullYear();
+        var opt={};
+        opt.date = {preset : 'date'};
+        opt.datetime = {preset : 'datetime'};
+        opt.time = {preset : 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear - 10, //开始年份
+            endYear: currYear + 10 //结束年份
+        };
+
+        $("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+        var optDateTime = $.extend(opt['datetime'], opt['default']);
+        var optTime = $.extend(opt['time'], opt['default']);
+        $("#appDateTime").mobiscroll(optDateTime).datetime(optDateTime);
+        $("#appTime").mobiscroll(optTime).time(optTime);
+    });
+</script>
+<script>
+
+    function getCookie(c_name)
+    {
+        if (document.cookie.length>0)
+        {
+            c_start=document.cookie.indexOf(c_name + "=");
+            if (c_start!=-1)
+            {
+                c_start=c_start + c_name.length+1;
+                c_end=document.cookie.indexOf(";",c_start);
+                if (c_end==-1) c_end=document.cookie.length;
+                return unescape(document.cookie.substring(c_start,c_end))
+            }
+        }
+        return ""
+    }
+
+    var oArea=document.getElementsByClassName('area_news')[0];
+    oArea.innerHTML=(getCookie('news'));
+</script>
+<script type="text/javascript">
+    //下面用于图片上传预览功能
+    var docObj=document.getElementById("doc");
+    var addPic=document.getElementById("addPic");
+    docObj.onchange=function(){
+
+        setImagePreview();
+    };
+    function setImagePreview() {
+        var localImagId = document.getElementById("localImag");
+        localImagId.innerHTML='';
+            localImagId.innerHTML='<img class="preview" style="position: absolute;"  src="">';
+        var imgObjPreview=document.getElementsByClassName("preview")[0];
+
+        if(docObj.files &&docObj.files[0])
+        {
+                //火狐下，直接设img属性
+            addPic.style.display='none';
+//imgObjPreview.src = docObj.files[0].getAsDataURL();
+
+//火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+                imgObjPreview.src=window.URL.createObjectURL(docObj.files[0]);
+                console.log( docObj.files[0]);
+        }else
+        {
+//IE9下，使用滤镜
+            docObj.select();
+            var imgSrc = document.selection.createRange().text;
+
+//必须设置初始大小
+            localImagId.style.width = "150px";
+            localImagId.style.height = "180px";
+//图片异常的捕捉，防止用户修改后缀来伪造图片
+            try{
+                localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+            }
+            catch(e)
+            {
+                alert("您上传的图片格式不正确，请重新选择!");
+                return false;
+            }
+            imgObjPreview.style.display = 'none';
+            document.selection.empty();
+        }
+        return true;
+    }
+</script>
+
+
+</body>
+</html>

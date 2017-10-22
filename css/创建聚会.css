@@ -1,0 +1,40 @@
+@media(min-width: 642px){.content{font-size:30px;}}
+@media(max-width: 641px){.content{font-size:24px;}}
+@media(max-width: 481px){.content{font-size:18px;}}
+@media screen and (max-width: 321px){.content{font-size:12px;}}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: arial, verdana, sans-serif;
+    font-size: 12px;
+    background: #ddd;
+}
+input, select{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+    border-radius: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-border-radius: 5px;
+}
+.num{border:1px solid #aaa;}
+.content {
+    padding:0 15px 15px;
+    background: #eee;
+}
+.preview{
+    display: block;height: 1.5em;width: 1.5em;position: absolute;right:0.4em;top: 0;
+}
+#doc{position: absolute;right: 0;top: 0;opacity: 0;filter: alpha(opacity=0);z-index: 1;height: 1.5em;width: 1.5em;margin-top: 0em;}
+#addPic{display:inline-block;position: absolute;right:0;z-index:0;height: 1.5em;width: 1.5em;margin-top: -0.1em;}
+
+
+.creat_name,.creat_type{margin-bottom: 0.5em;}
+.creat{background:#fff;padding:0.75em 0;border-bottom: 1px solid #ececec;}
+
+.left img{height: 1em;float:right;margin-right: 1em;margin-top: 0.3em;}
+.creat_area{color: #ff726b;background: #fff;border: 1px solid #ff726b;padding: 0.3em;border-radius: 5px;}
+

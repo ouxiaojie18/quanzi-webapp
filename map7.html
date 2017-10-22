@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>逆地理编码</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=31d09e24a47c20aca92cafa244f43c82&plugin=AMap.Geocoder"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+
+    <style>
+        @media(min-width: 642px){.btn{font-size:36px;}}
+        @media(max-width: 641px){.btn{font-size:25px;}}
+        @media(max-width: 481px){.btn{font-size:18px;}}
+        @media screen and (max-width: 321px){.btn{font-size:15px;}}
+        .amap-touch-toolbar .amap-zoomcontrol{bottom: -10px;}
+        .amap-logo,.amap-copyright,.amap-mcode{display: none;z-index: -1;}
+        .btn{color:#fff;background:#ff726b;line-height: 2em;width: 100%;position: absolute;bottom: 0;border: none;}
+    </style>
+</head>
+<body style="position: relative;" onload="regeocoder();">
+<div id="container"></div>
+<div id="tip">
+    <span id="result"></span>
+    <!--<input type="text" id="txt"/>-->
+</div>
+<input type="submit" class="btn" value="确定" style="" />
+<script type="text/javascript">
+        function getCookie(c_name)
+        {
+            if (document.cookie.length>0)
+            {
+                c_start=document.cookie.indexOf(c_name + "=");
+                if (c_start!=-1)
+                {
+                    c_start=c_start + c_name.length+1;
+                    c_end=document.cookie.indexOf(";",c_start);
+                    if (c_end==-1) c_end=document.cookie.length;
+                    return unescape(document.cookie.substring(c_start,c_end))
+                }
+            }
+            return ""
+        }
+
+        function setCookie(c_name,value,expiredays)
+        {
+            var exdate=new Date();
+            exdate.setDate(exdate.getDate()+expiredays);
+            document.cookie=c_name+ "=" +escape(value)+
+                    ((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+        }
+
+        var  geolocation;
+    var map = new AMap.Map("container", {
+                resizeEnable: true,
+                zoom: 18
+            }),
+            lnglatXY = []; //已知点坐标
+
+        map.plugin('AMap.Geolocation', function() {
+            geolocation = new AMap.Geolocation({
+                enableHighAccuracy: true,//是否使用高精度定位，默认:true
+                timeout: 10000,          //超过10秒后停止定位，默认：无穷大
+                buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+                zoomToAccuracy: true,      //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+                buttonPosition:'RB'
+            });
+            map.addControl(geolocation);
+            geolocation.getCurrentPosition();
+            AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
+            AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
+        });
+        //解析定位结果
+        function onComplete(data) {
+            setCookie("lng",data.position.getLng());
+            setCookie("lat",data.position.getLat());
+        }
+        //解析定位错误信息
+        function onError(data) {
+            document.getElementById('tip').innerHTML = '定位失败';
+        }
+
+
+
+    function regeocoder() {  //逆地理编码
+        var geocoder = new AMap.Geocoder({
+            radius: 1000,
+            extensions: "all"
+        });
+        lnglatXY = [getCookie("lng"),getCookie("lat")];
+        geocoder.getAddress(lnglatXY, function(status, result) {
+            if (status === 'complete' && result.info === 'OK') {
+                geocoder_CallBack(result);
+            }
+        });
+
+        map.setFitView();
+    }
+
+    function geocoder_CallBack(data) {
+
+        var address = data.regeocode.formattedAddress; //返回地址描述
+        document.getElementById("result").innerHTML = address;
+
+    }
+
+        var map = new AMap.Map('container', {
+            resizeEnable: true,
+            center: [getCookie("lng"),getCookie("lat")],
+            zoom: 13
+        });
+        var marker = new AMap.Marker({
+            position: map.getCenter(),
+            draggable: true,
+            cursor: 'move'
+        });
+        marker.setMap(map);
+        // 设置点标记的动画效果，此处为弹跳效果
+        marker.setAnimation('AMAP_ANIMATION_BOUNCE');
+        var markers=[];
+        markers.push(marker);
+
+
+
+            map.on('click', function(e) {
+                setCookie("lng",e.lnglat.getLng());
+                setCookie("lat",e.lnglat.getLat());
+                map.remove(markers);
+                regeocoder();
+                var marker = new AMap.Marker({
+                    position: [e.lnglat.getLng(),e.lnglat.getLat()],
+                    draggable: true,
+                    cursor: 'move'
+                });
+                marker.setMap(map);
+                markers.push(marker);
+                // 设置点标记的动画效果，此处为弹跳效果
+                marker.setAnimation('AMAP_ANIMATION_BOUNCE');
+                regeocoder();
+
+            });
+   // var oTxt=document.getElementById('txt');
+        var oBtn=document.getElementsByClassName('btn')[0];
+    oBtn.onclick=function(){
+        setCookie("news",document.getElementById("result").innerHTML);
+        //window.location.go(-1);
+        window.location.href='创建聚会.html';
+    };
+</script>
+</body>
+</html>

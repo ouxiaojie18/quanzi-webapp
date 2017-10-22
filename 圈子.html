@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>圈子</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/圈子.css">
+	<script src="js/圈子.js"></script>
+
+	<link href="css/photoswipe.css" rel="stylesheet" />
+	<link href="css/default-skin.css" rel="stylesheet" />
+	<script src="js/photoswipe.min.js"></script>
+	<script src="js/photoswipe-ui-default.min.js"></script>
+
+	<script src="js/jquery.transit.js"></script>
+	<script src="js/hammer.js"></script>
+	<script src="js/jquery.hammer.js"></script>
+	<script>
+		$(function (){
+			$("[data-toggle='popover']").popover();
+		});
+	</script>
+
+</head>
+<body>
+<div class="wrap">
+	<div class="title">
+		<div class="container">
+			<div class="row">
+				<a href="" class="my_next col-xs-2 text-center"><img src="img/left.png" alt=""/></a>
+				<span class="wang_title col-xs-8 text-center img-responsive center-block">圈子</span>
+				<!--<a href="" class="my_add col-xs-2 text-left"><img src="img/+.png" alt=""/></a>-->
+				<div class="my_add col-xs-2 text-left" >
+					<button type="button" class="my_add btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom"
+							data-html="true" data-content='<div style="width:12em;">
+                <div style="margin:0 0.5em 0.5em;float:left;">
+                    <a href="发送到圈子.html"><img style="width:2em;height:2em;" src="img/文字.png" alt=""/></a>
+                    <p class="word_tip">文字</p>
+                </div>
+                <div style="margin:0 0.5em 0.5em;float:left;">
+                    <a href="发送到圈子.html"><img style="width:2em;height:2em;" src="img/视频.png" alt=""/></a>
+                    <p class="word_tip">视频</p>
+                </div>
+                <div style="margin:0 0.5em 0.5em;float:left;">
+                    <a href="发送到圈子.html"><img style="width:2em;height:2em;" src="img/图片.png" alt=""/></a>
+                    <p class="word_tip">图片</p>
+                </div>
+                <div style="margin:0 0.5em 0.5em;float:left;">
+                    <a href="发送到圈子.html"><img style="width:2em;height:2em;" src="img/文章.png" alt=""/></a>
+                    <p class="word_tip">文章</p>
+                </div>
+        </div>'
+							style="width:1em;height:1em;margin-top:0.8em;background:url(img/+.png) no-repeat;background-size:1em 1em;border: none;outline:none;"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="main">
+		<div id="list">
+			<ul>
+				<li>
+					<div class="po-avt-wrap" >
+						<img class="po-avt data-avt"  src="img/头像.jpg">
+					</div>
+					<div class="po-cmt">
+						<div class="po-hd">
+							<p class="po-name"><span class="data-name">张艺兴</span></p>
+							<div class="post">
+								<p>大家好，听说国内冻成狗🐶？我这边还挺热～</p>
+								<div class="gallery">
+									<a href="img/头像1.jpg" data-size="100x100" data-med="img/头像1.jpg" data-med-size="1920x1200">
+										<img class="list-img" src="img/头像1.jpg" style="height: 80px;margin-right:0.5em;">
+									</a>
+
+									<a href="img/头像2.jpg" data-size="100x100" data-med="img/头像2.jpg" data-med-size="750x300">
+										<img class="list-img" src="img/头像2.jpg" style="height: 80px;margin-right:0.5em;">
+									</a>
+
+									<a href="img/头像3.jpg" data-size="100x100" data-med="img/头像3.jpg" data-med-size="440x440">
+										<img class="list-img" src="img/头像3.jpg" style="height: 80px;">
+									</a>
+								</div>
+							</div>
+							<!-- 图片弹出模态框 -->
+							<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+								<div class="pswp__bg"></div>
+								<div class="pswp__scroll-wrap">
+									<div class="pswp__container">
+										<div class="pswp__item"></div>
+										<div class="pswp__item"></div>
+										<div class="pswp__item"></div>
+									</div>
+									<div class="pswp__ui pswp__ui--hidden">
+										<div class="pswp__top-bar" style="opacity:0;">
+											<div class="pswp__counter"></div>
+											<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+											<button class="pswp__button pswp__button--share" title="Share"></button>
+											<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+											<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+											<div class="pswp__preloader">
+												<div class="pswp__preloader__icn">
+													<div class="pswp__preloader__cut">
+														<div class="pswp__preloader__donut"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="pswp__loading-indicator">
+											<div class="pswp__loading-indicator__line"></div>
+										</div>
+										<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+											<div class="pswp__share-tooltip">
+												<a href="#" class="pswp__share--facebook"></a>
+												<a href="#" class="pswp__share--twitter"></a>
+												<a href="#" class="pswp__share--pinterest"></a>
+												<a href="#" download class="pswp__share--download"></a>
+											</div>
+										</div>
+										<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+										<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+										<div class="pswp__caption">
+											<div class="pswp__caption__center"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="time">刚刚</p><img class="c-icon" src="img/c.png">
+						</div>
+						<div class="r"></div>
+						<div class="cmt-wrap">
+							<div class="like"><img src="img/l.png">苍井空，陈冠希，杨幂，王思聪，陈赫，刘德华，马云...</div>
+							<div class="cmt-list">
+								<p><span>wu世勋-EXO：</span>나는 서명～</p>
+								<p><span>鹿晗：</span>我们在国内冻成狗，我也想跟哥您去热热～</p>
+								<p><span>权志龙：</span>나는 서명～</p>
+								<p><span>王思聪：</span>去哪玩啊？那么爽</p>
+								<p>
+									<span class="data-name">张艺兴</span>
+									回复
+									<span>
+										王思聪
+									</span>
+									<span>
+										：
+									</span>
+									澳洲大堡礁，这边刚好是夏季，挺适合避寒的。
+								</p>
+								<p><span>杨幂：</span>😘私人飞机出行，求带上我～</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="po-avt-wrap">
+						<img class="po-avt" src="img/头像1.jpg">
+					</div>
+					<div class="po-cmt">
+						<div class="po-hd">
+							<p class="po-name">
+								王思聪
+							</p>
+							<div class="post">
+								<p>
+									那一年这兄弟三人发誓一定要出人头地
+									<br>
+									以后有福同享有难同当
+									<br>
+									如今：
+									<br>
+									大哥只手遮天万人之上
+									<br>
+									二哥黄金万两富甲一方
+									<br>
+									三弟淡泊名利为人低调
+								</p>
+								<div class="gallery">
+									<a href="img/头像1.jpg" data-size="100x100" data-med="img/头像1.jpg" data-med-size="1920x1200">
+										<img class="list-img" src="img/头像1.jpg" style="height: 80px;margin-right:0.5em;">
+									</a>
+
+									<a href="img/头像2.jpg" data-size="100x100" data-med="img/头像2.jpg" data-med-size="750x300">
+										<img class="list-img" src="img/头像2.jpg" style="height: 80px;margin-right:0.5em;">
+									</a>
+
+									<a href="img/头像3.jpg" data-size="100x100" data-med="img/头像3.jpg" data-med-size="440x440">
+										<img class="data-avt list-img" src="img/头像3.jpg" style="height: 80px;">
+									</a>
+								</div>
+
+							</div>
+							<p class="time">
+								1分钟前
+							</p>
+							<img class="c-icon" src="img/c.png">
+						</div>
+						<div class="r">
+						</div>
+						<div class="cmt-wrap">
+							<div class="like">
+								<img src="img/l.png">
+								鹿晗，林更新，杨幂，angelababy，范冰冰...
+							</div>
+							<div class="cmt-list">
+								<p>
+									<span>
+										鹿晗：
+									</span>
+									赞！
+								</p>
+								<p>
+									<span class="data-name">某某科技~贾素杰</span>
+									<span>
+										：
+									</span>
+									低调低调。。
+								</p>
+								<p>
+									<span>
+										王思聪
+									</span>
+									回复
+									<span class="data-name">某某科技~贾素杰</span>
+									<span>
+										：
+									</span>
+									哥您就是太低调了
+								</p>
+								<p>
+									<span>
+										习
+									</span>
+									回复
+									<span class="data-name">某某科技~贾素杰</span>
+									<span>
+										：
+									</span>
+									好几天没见，我们该聚聚了
+								</p>
+								<p>
+									<span>
+										马云
+									</span>
+									回复
+									<span class="data-name">某某科技~贾素杰</span>
+									<span>
+										：
+									</span>
+									有笔大生意找你聊聊
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="po-avt-wrap">
+						<img class="po-avt" src="img/头像2.jpg">
+
+					</div>
+					<div class="po-cmt">
+						<div class="po-hd">
+							<p class="ads">推广<img src="img/ads.png"></p>
+							<p class="po-name">金猫银猫CSmall官方</p>
+							<div class="post">金猫银猫CSmall情人节买珠宝赠永生花专场
+								<p><a class="ad-link" href="http://m.csmall.com/activity/3914.html">查看详情 <img src="img/link.png"></a></p>
+									<div class="gallery">
+										<a href="img/头像1.jpg" data-size="100x100" data-med="img/头像1.jpg" data-med-size="1920x1200">
+											<img class="noplayimg" src="img/头像1.jpg" style="height: 80px;">
+										</a>
+									</div>
+							</div>
+							<p class="time">45分钟前</p><img class="c-icon" src="img/c.png">
+						</div>
+						<div class="r"></div>
+						<div class="cmt-wrap">
+							<div class="like"><img src="img/l.png">范冰冰，李晨，王思聪，王健林，...</div>
+							<div class="cmt-list">
+								<p><span>范冰冰：</span>珠宝再加上永生花，花永生，爱永恒，想想都觉得好浪漫哦~<img class="bq" src="img/bq1.png"></p>
+								<p><span>李晨</span>回复<span>范冰冰 ：</span>小肥羊~初七情人节见！定格我们的爱情吧❤</p>
+								<p><span>王思聪：</span>我女朋友多，团购才能搞定啊！</p>
+							</div>
+						</div>
+					</div></li>
+			</ul>
+		</div>
+	</div>
+	<div class="foot" style="position: fixed;bottom: 0;z-index: 1;">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-3 text-center">
+					<a href="聚会.html"><img src="img/聚会-点击前.png" alt=""/></a>
+					<p>聚会</p>
+				</div>
+				<div class="col-xs-3 text-center">
+					<a href="圈子.html"><img src="img/圈子-点击后.png" alt=""/></a>
+					<p style="color:#ff726b;">圈子</p>
+				</div>
+				<div class="col-xs-3 text-center">
+					<a href="朋友.html"><img src="img/朋友-点击前.png" alt=""/></a>
+					<p>朋友</p>
+				</div>
+				<div class="col-xs-3 text-center">
+					<a href="我的.html"><img src="img/我的-点击前.png" alt=""/></a>
+					<p>我的</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+<script src="js/initPhotoSwipeFromDOM.js"></script>
+<script>initPhotoSwipeFromDOM('.gallery');</script>
+</html>
